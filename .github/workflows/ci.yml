@@ -30,9 +30,9 @@ jobs:
     - uses: actions/cache@v1
       with:
         path: ./venv
-        key: ${{ runner.os }}-build-virtualenv-${{ matrix.tox-py }}-${{ hashFiles('**/requirements.txt') }}-${{ hashFiles('**/requirements-test.txt') }}
+        key: ${{ runner.os }}-build-virtualenv-2-${{ matrix.tox-py }}-${{ hashFiles('**/requirements.txt') }}-${{ hashFiles('**/requirements-test.txt') }}
         restore-keys: |
-          ${{ runner.os }}-build-virtualenv-${{ matrix.tox-py }}-
+          ${{ runner.os }}-build-virtualenv-2-${{ matrix.tox-py }}-
     - name: Install dependencies
       run: |
         python -m venv venv
