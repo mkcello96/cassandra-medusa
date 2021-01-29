@@ -124,7 +124,7 @@ class AzureStorage(AbstractStorage):
 
         if multipart:
             hashes_match = (
-                    actual_hash == hash_in_manifest
+                actual_hash == hash_in_manifest
             )
         else:
             hashes_match = (
